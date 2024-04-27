@@ -1,7 +1,7 @@
 //Mensaje de inicio
 alert("PROMEDIOS - Ingrese sus usuarios y 3 notas para calcular el promedio de notas de la materia");
 
-// Array para almacenar los datos de cada usuario
+// Array para almacenar los datos de cada alumno
 let usuarios = [];
 
 // Función para calcular el promedio del array
@@ -26,15 +26,15 @@ function obtenerNumeroValido(mensaje) {
 function ingresarUsuario() {
   let nombreUsuario;
   do {
-    nombreUsuario = prompt("Ingrese el nombre del usuario (o escriba 'no' para salir): ");
+    nombreUsuario = prompt("Ingrese el nombre del alumno (o escriba 'no' para salir): ");
     if (!nombreUsuario) {
-      alert("Por favor, ingrese al menos un usuario.");
+      alert("Por favor, ingrese al menos un alumno.");
     }
   } while (!nombreUsuario && nombreUsuario.toLowerCase() !== "no");
 
   if (nombreUsuario.toLowerCase() === "no") {
     if (usuarios.length === 0) {
-      alert("No se ingresaron usuarios. El programa finalizará.");
+      alert("No se ingresaron alumnos. El programa finalizará.");
     }
     return false;
   }
@@ -50,10 +50,10 @@ function ingresarUsuario() {
   return true;
 }
 
-// Variable para controlar el ingreso de usuarios
+// Variable para controlar el ingreso de alumnos
 let continuarIngresandoUsuarios = true;
 
-// Ciclo para ingresar usuarios
+// Ciclo para ingresar alumnos
 while (continuarIngresandoUsuarios) {
   if (!ingresarUsuario()) {
     break;
@@ -66,7 +66,7 @@ if (usuarios.length === 0) {
   // Mostrar la cantidad de alumnos analizados
   console.log(`La cantidad de alumnos analizados para el promedio es de: ${usuarios.length}`);
 
-  // Mostrar las notas de cada usuario
+  // Mostrar las notas de cada alumno
   console.log("Notas de los Usuarios:");
   usuarios.forEach(usuario => {
     console.log(`${usuario.nombre}: Matemática: ${usuario.matematica}, Lengua: ${usuario.lengua}, Geografía: ${usuario.geografia}`);
