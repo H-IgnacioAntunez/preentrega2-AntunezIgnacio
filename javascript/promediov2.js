@@ -1,5 +1,5 @@
 //Mensaje de inicio
-alert("PROMEDIOS - Ingrese sus usuarios y 3 notas para calcular el promedio de notas de la materia");
+alert("PROMEDIOS - Ingrese sus alumnos y 3 notas para calcular el promedio de notas de la materia");
 
 // Array para almacenar los datos de cada alumno
 let usuarios = [];
